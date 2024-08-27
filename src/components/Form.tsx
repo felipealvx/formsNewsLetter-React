@@ -8,15 +8,15 @@ const Form = () => {
         gap-3
         shadow-xl
     ">
-        <div className="flex gap-1">
+        <div className="flex gap-1 flex-col">
             <label className="w-20">Nome:</label>
             <input type="text" placeholder="Digite Seu Nome"
-            className="w-full rounded-sm px-2 border"/>
+            className="w-full rounded-sm px-2 py-2 border "/>
         </div>
-        <div className="flex gap-1">
+        <div className="flex gap-1 flex-col">
             <label className="w-20">E-mail:</label>
             <input type="email" name="email" id="email" placeholder="Digite seu melhor e-mail"
-            className="w-full rounded-sm px-2 border"/>
+            className="w-full rounded-sm px-2 py-2 border"/>
         </div>
         <div className="w-full flex flex-col gap-3">
             <a href="#" className="text-purple-700 underline text-center">Leia os Termos.</a>
