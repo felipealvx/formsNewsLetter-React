@@ -23,7 +23,7 @@ const Form = () => {
             <div className="flex gap-1">
                 <input type="checkbox" name="terms" id="terms" 
                 className="cursor-pointer"/>
-                <label htmlFor="agree">Eu confirmo que li e aceito os termos de uso.</label>
+                <label htmlFor="agree">Eu confirmo que li e aceito os termos de uso!</label>
             </div>
         </div>
         <button className="bg-purple-700 rounded-sm text-white font-bold p-2 hover:bg-purple-500 transition-colors duration-300">Cadastrar-se</button>
