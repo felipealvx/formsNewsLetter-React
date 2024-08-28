@@ -1,13 +1,42 @@
-const Form = () => {
-    return <form className="
+import { User } from "../types/User";
+import { useState, FormEvent } from "react";
+import { validate } from "../utils/validate";
+
+export const Form = () => {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [agree, setAgree] = useState(false);
+
+    const [errors, setErros] = useState <User | null> (null);
+
+    const handleSubmit = (e: FormEvent) => {
+        e.preventDefault();
+
+        const data: User = {
+            name,
+            email,
+            agree,
+        };
+
+        const validateErrors = validate(data);
+
+        if (Object.keys(validateErrors).length > 0){
+            alert("Tem Erros")
+            return;
+        };
+
+        alert("Obrigado por se inscrever!")
+    };
+
+    return (
+        <form className=" 
         bg-slate-50 
         p-5
         rounded-md
         flex
         flex-col
         gap-3
-        shadow-xl
-    ">
+        shadow-xl" onSubmit={handleSubmit}>
         <div className="flex gap-1 flex-col">
             <label className="w-20">Nome:</label>
             <input type="text" placeholder="Digite Seu Nome"
@@ -28,5 +57,5 @@ const Form = () => {
         </div>
         <button className="bg-purple-700 rounded-sm text-white font-bold p-2 hover:bg-purple-500 transition-colors duration-300">Cadastrar-se</button>
     </form>
+    );
 };
-export default Form;

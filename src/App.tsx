@@ -1,5 +1,4 @@
-import "./App.css";
-import Form from "./components/Form";
+import { Form } from "./components/Form";
 import { FaStar } from "react-icons/fa6";
 
 function App() {
